@@ -7,15 +7,16 @@
 
 import SwiftUI
 
+//Defining list of cases
+enum Emoji: String {
+    case 😀,🌹,😅,😍,😱, 💪🏾, 💋
+}
+
 struct ContentView: View {
+    var selection: Emoji = .💪🏾
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Text(selection.rawValue)
     }
 }
 
